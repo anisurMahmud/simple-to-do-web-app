@@ -1,11 +1,11 @@
-import Image from "next/image";
+"use client";
+import React, { useState, useEffect } from "react";
+import TasksPage from "./tasksPage";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div>
-        Hello
-      </div>
+    <main className="max-w-4xl mx-auto mt-4">
+      <TasksPage/>
     </main>
   );
 }
