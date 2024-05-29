@@ -15,17 +15,7 @@ export default function TasksPage(){
     const [ newTitle, setNewTitle] = useState('');
     const [newDescription, setNewDescription] = useState('');
 
-    // useEffect(() => {
-    // const savedTasks = JSON.parse(localStorage.getItem('tasks'));
-    // if (savedTasks) {
-    //     dispatch(editTask(savedTasks));
-    // }
-    // }, [dispatch]);
-
-    // useEffect(() => {
-    // localStorage.setItem('tasks', JSON.stringify(tasks));
-    // }, [tasks]);
-
+    
     const handleAddTask = () => {
     if (title.trim() !==''){
         dispatch(addTask({title, description}));

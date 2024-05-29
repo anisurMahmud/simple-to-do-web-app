@@ -1,4 +1,4 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This is a [Next.js](https://nextjs.org/) project with Tailwind CSS, Redux. It is a simple To-do Application
 
 ## Getting Started
 
@@ -6,31 +6,36 @@ First, run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) with any browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
+## Technologies Used
 
 To learn more about Next.js, take a look at the following resources:
+-Local Storage for Database
+-Tailwind CSS for design
+-Redux for State Management
+-Next JS for Development
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Features
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Upon starting the app, the user will find the following features:
+-Create New Task/ Add Task
+-Can Delete Tasks
+-Can edit Tasks
+-Can see All Tasks
 
-## Deploy on Vercel
+## Code Structure
+In the App folder, tasksPage.js file contains frontend code for web page which is later imported to page.js file in the same folder.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+There's folder named redux which contains todoSlice.js, store.js, provider.js. 
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Here todoSlice.js file in redux folder contains reducers for the to-do app. Adding tasks, editing tasks and deleting task states are defined there.
+
+store.js was used to as centralized place to manage application states.
+
+provider was used so that redux store can be used in next js. Provider was imported in layout.js file in app folder.
+
+Reactjs-popup was additionally used for using pop up box.
